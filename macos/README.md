@@ -49,17 +49,19 @@ These applications aren't in either Homebrew or the Mac App Store and have to be
 ### Tailscale
 
 ```
-cd /tmp
-wget https://pkgs.tailscale.com/stable/Tailscale-1.26.2-macos.zip
-unzip Tailscale-1.26.2-macos.zip
-mv Tailscale.app /Applications/
+cd /tmp && \
+wget https://pkgs.tailscale.com/stable/Tailscale-1.26.2-macos.zip && \
+unzip Tailscale-1.26.2-macos.zip && \
+mv Tailscale.app /Applications/ && \
 ```
 
 ### Stream Deck
 
-cd /tmp
-wget https://edge.elgato.com/egc/macos/sd/Stream_Deck_5.3.1.15197.pkg
-open Stream_Deck_5.3.1.15197.pkg
+```
+cd /tmp && \
+wget https://edge.elgato.com/egc/macos/sd/Stream_Deck_5.3.1.15197.pkg && \
+open Stream_Deck_5.3.1.15197.pkg && \
+```
 
 ## App Follow-up
 
@@ -82,12 +84,12 @@ defaults write com.apple.dock persistent-apps -array && killall Dock
 Instructions on what all of this means can be found [here](https://blog.jiayu.co/2018/12/quickly-configuring-hot-corners-on-macos/).
 
 ```
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
-defaults write com.apple.dock wvous-tl-corner -int 2
-defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 5 && \
+defaults write com.apple.dock wvous-bl-modifier -int 0 && \
+defaults write com.apple.dock wvous-br-corner -int 4 && \
+defaults write com.apple.dock wvous-br-modifier -int 0 && \
+defaults write com.apple.dock wvous-tl-corner -int 2 && \
+defaults write com.apple.dock wvous-tl-modifier -int 0 && \
 killall Dock
 ```
 
