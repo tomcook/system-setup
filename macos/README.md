@@ -33,17 +33,13 @@ open /System/Applications/App\ Store.app
 This first command is to be used on any system (personal or work)
 
 ```
-mkdir ~/tmp && \
-curl -fsSL -o ~/tmp/Brewfile "https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile" && \
-brew bundle --file ~/tmp/Brewfile
+curl -fsSL https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile | brew bundle --file=-
 ```
 
 This command is just for use on personal systems
 
 ```
-mkdir ~/tmp && \
-curl -fsSL -o ~/tmp/Brewfile "https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile-personal" && \
-brew bundle --file ~/tmp/Brewfile-personal
+curl -fsSL https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile-personal | brew bundle --file=-
 ```
 
 ## Other Apps
