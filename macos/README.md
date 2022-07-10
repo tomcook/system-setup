@@ -14,14 +14,12 @@ Run all of these steps in sequence when setting up a new macOS system. This is t
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-brew tap hashicorp/tap
-
-brew install gpg htop nmap wget jq httpie mas bat dog exa
-
-brew install --cask homebrew/cask-versions/google-chrome-beta docker maestral little-snitch 1password 1password-cli spotify iterm2 aerial visual-studio-code github homebrew/cask-versions/slack-beta istat-menus soundsource transmit
-
-brew install hashicorp/tap/packer hashicorp/tap/terraform
+```
+mkdir ~/tmp && \
+curl -fsSL -o ~/tmp/Brewfile "https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile" && \
+brew bundle --file ~/tmp/Brewfile
 ```
 
 ### Only installed on personal systems
@@ -52,7 +50,7 @@ These applications aren't in either Homebrew or the Mac App Store and have to be
 cd /tmp && \
 wget https://pkgs.tailscale.com/stable/Tailscale-1.26.2-macos.zip && \
 unzip Tailscale-1.26.2-macos.zip && \
-mv Tailscale.app /Applications/ && \
+mv Tailscale.app /Applications/
 ```
 
 ### Stream Deck
@@ -60,7 +58,7 @@ mv Tailscale.app /Applications/ && \
 ```
 cd /tmp && \
 wget https://edge.elgato.com/egc/macos/sd/Stream_Deck_5.3.1.15197.pkg && \
-open Stream_Deck_5.3.1.15197.pkg && \
+open Stream_Deck_5.3.1.15197.pkg
 ```
 
 ## App Follow-up
