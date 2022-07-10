@@ -95,4 +95,10 @@ killall Dock
 
 ## Misc
 
+### Change to the bash shell
+
+```
+chsh -s /bin/bash
+```
+
 ### iStat Menu Config
