@@ -1,0 +1,9 @@
+cask "battle-net"
+cask "discord"
+cask "steam"
+mas "Bear", id: 1091189122
+mas "Brother iPrint&Scan", id: 1193539993
+mas "Day One", id: 1055511498
+mas "LINE", id: 539883307
+mas "Soulver", id: 413965349
+mas "Pixelmator", id: 407963104

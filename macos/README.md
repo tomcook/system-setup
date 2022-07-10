@@ -4,6 +4,10 @@ Run all of these steps in sequence when setting up a new macOS system. This is t
 
 ## Install all OS Updates
 
+```
+/usr/sbin/softwareupdate -ia
+```
+
 ### Install Rosetta 2
 
 ```
@@ -16,28 +20,30 @@ Run all of these steps in sequence when setting up a new macOS system. This is t
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+### Auth with Mac App Store
+
+This must be done manually. Open the Mac App Store and authenticate with your Apple ID before the next steps.
+
+```
+open /System/Applications/App\ Store.app
+```
+
+### Install Homebrew/MAS software
+
+This first command is to be used on any system (personal or work)
+
 ```
 mkdir ~/tmp && \
 curl -fsSL -o ~/tmp/Brewfile "https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile" && \
 brew bundle --file ~/tmp/Brewfile
 ```
 
-### Only installed on personal systems
+This command is just for use on personal systems
 
 ```
-brew install --cask battle-net discord steam
-```
-
-## Mac App Store
-
-You'll need to manually launch the Mac App Store and sign in with your Apple ID before any of the next commands will work.
-
-```
-# XCode, NextDNS, Amphetamine, WireGuard
-mas install 497799835 1464122853 937984704 1451685025
-
-# Bear, Brother Scanner Software, Day One, LINE, Keynote, Soulver, Pixelmator
-mas install 1091189122 1193539993 1055511498 539883307 409183694 1508732804 407963104
+mkdir ~/tmp && \
+curl -fsSL -o ~/tmp/Brewfile "https://raw.githubusercontent.com/tomcook/system-setup/main/macos/Brewfile-personal" && \
+brew bundle --file ~/tmp/Brewfile-personal
 ```
 
 ## Other Apps
