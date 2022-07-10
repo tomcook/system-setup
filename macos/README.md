@@ -19,7 +19,7 @@ brew tap hashicorp/tap
 
 brew install gpg htop nmap wget jq httpie mas bat dog exa
 
-brew install --cask docker homebrew/cask-versions/google-chrome-beta docker maestral little-snitch 1password 1password-cli spotify iterm2 aerial visual-studio-code github homebrew/cask-versions/slack-beta istat-menus soundsource transmit
+brew install --cask homebrew/cask-versions/google-chrome-beta docker maestral little-snitch 1password 1password-cli spotify iterm2 aerial visual-studio-code github homebrew/cask-versions/slack-beta istat-menus soundsource transmit
 
 brew install hashicorp/tap/packer hashicorp/tap/terraform
 ```

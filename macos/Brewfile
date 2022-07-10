@@ -1,0 +1,44 @@
+tap "1password/tap"
+tap "hashicorp/tap"
+brew "bat"
+brew "dog"
+brew "exa"
+brew "gpg"
+brew "htop"
+brew "httpie"
+brew "jq"
+brew "mas"
+brew "nmap"
+brew "shellcheck"
+brew "wget"
+brew "hashicorp/tap/nomad"
+brew "hashicorp/tap/packer"
+brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/vault"
+cask "1password"
+cask "1password-cli"
+cask "aerial"
+cask "battle-net"
+cask "discord"
+cask "docker"
+cask "github"
+cask "google-chrome-beta"
+cask "istat-menus"
+cask "iterm2"
+cask "little-snitch"
+cask "maestral"
+cask "slack-beta"
+cask "soundsource"
+cask "spotify"
+cask "steam"
+cask "transmit"
+cask "visual-studio-code"
+#mas "Amphetamine", id: 937984704
+#mas "GarageBand", id: 682658836
+#mas "iMovie", id: 408981434
+#mas "Keynote", id: 409183694
+#mas "NextDNS", id: 1464122853
+#mas "Numbers", id: 409203825
+#mas "Pages", id: 409201541
+#mas "WireGuard", id: 1451685025
+#mas "XCode", id: 497799835
