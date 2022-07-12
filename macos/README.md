@@ -2,7 +2,9 @@
 
 Run all of these steps in sequence when setting up a new macOS system. This is tested on macOS 12.4 (Monterey) and may not work on earlier or later releases.
 
-## Install all OS Updates
+## Basic OS Config
+
+### Fully update OS
 
 ```
 /usr/sbin/softwareupdate -ia
@@ -12,6 +14,18 @@ Run all of these steps in sequence when setting up a new macOS system. This is t
 
 ```
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+```
+
+### Enable the OS Firewall
+
+```
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+```
+
+### Enable FileVault
+
+```
+/usr/bin/fdesetup enable
 ```
 
 ## Homebrew
