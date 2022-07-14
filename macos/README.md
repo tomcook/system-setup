@@ -91,13 +91,25 @@ wget http://stuntsoftware.com/download/reflex_1.2.zip
 - Soundsource will need a full manual configuration and possibly a reboot
 - NextDNS needs to be started and configured with the correct Configuration ID
 
-
 ## Finder / UI Customizations
 
-### Remove everything from the Dock
+### Dock customization
+
+- Remove all icons from the Dock
+- Make the Dock appear instantly instead of slowly appearing
+- Very small, immutable size Dock icons
+- Only show running apps
+- Use the 'scale' animation to minimize windows to the Dock
 
 ```
-defaults write com.apple.dock persistent-apps -array && killall Dock
+defaults write com.apple.dock persistent-apps -array && \
+defaults write com.apple.dock autohide-delay -float 0.5 && \
+defaults write com.apple.dock autohide-time-modifier -int 0.5 && \
+defaults write com.apple.dock tilesize -int 12 && \
+defaults write com.apple.dock size-immutable -bool yes && \
+defaults write com.apple.dock static-only -bool true && \
+defaults write com.apple.dock mineffect -string scale && \
+killall Dock
 ```
 
 ### Set hot corners
