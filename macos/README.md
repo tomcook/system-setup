@@ -77,6 +77,13 @@ wget https://edge.elgato.com/egc/macos/sd/Stream_Deck_5.3.1.15197.pkg && \
 open Stream_Deck_5.3.1.15197.pkg
 ```
 
+### Reflex
+
+```
+cd ~/Downloads && \
+wget http://stuntsoftware.com/download/reflex_1.2.zip
+```
+
 ## App Follow-up
 
 - Little Snitch should be setup first. It'll require a number of permissions that have to be granted manually.

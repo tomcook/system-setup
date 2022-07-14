@@ -1,3 +1,4 @@
+brew "arq"
 cask "battle-net"
 cask "discord"
 cask "steam"
