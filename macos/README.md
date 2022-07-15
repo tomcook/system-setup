@@ -10,6 +10,17 @@ Run all of these steps in sequence when setting up a new macOS system. This is t
 /usr/sbin/softwareupdate -ia
 ```
 
+### Preferences for automatic updates
+
+```
+osascript -e "tell application \"System Preferences\" to quit" && \
+sudo softwareupdate --schedule off && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist AutomaticCheckEnabled -bool YES && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist AutomaticDownload -bool YES && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist ConfigDataInstall -bool YES && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist CriticalUpdateInstall -bool YES && \
+```
+
 ### Install Rosetta 2
 
 ```
