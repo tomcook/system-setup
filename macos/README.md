@@ -137,6 +137,13 @@ defaults write com.apple.dock wvous-tl-modifier -int 0 && \
 killall Dock
 ```
 
+### No drop shadow behind screenshots
+
+```
+defaults write com.apple.screencapture disable-shadow -bool true && \
+killall SystemUIServer
+```
+
 ## dotfiles
 
 ## Misc
