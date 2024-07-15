@@ -10,6 +10,17 @@ Run all of these steps in sequence when setting up a new macOS system. This is t
 /usr/sbin/softwareupdate -ia
 ```
 
+### Preferences for automatic updates
+
+```
+osascript -e "tell application \"System Preferences\" to quit" && \
+sudo softwareupdate --schedule off && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist AutomaticCheckEnabled -bool YES && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist AutomaticDownload -bool YES && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist ConfigDataInstall -bool YES && \
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist CriticalUpdateInstall -bool YES && \
+```
+
 ### Install Rosetta 2
 
 ```
@@ -77,6 +88,13 @@ wget https://edge.elgato.com/egc/macos/sd/Stream_Deck_5.3.1.15197.pkg && \
 open Stream_Deck_5.3.1.15197.pkg
 ```
 
+### Reflex
+
+```
+cd ~/Downloads && \
+wget http://stuntsoftware.com/download/reflex_1.2.zip
+```
+
 ## App Follow-up
 
 - Little Snitch should be setup first. It'll require a number of permissions that have to be granted manually.
@@ -84,13 +102,25 @@ open Stream_Deck_5.3.1.15197.pkg
 - Soundsource will need a full manual configuration and possibly a reboot
 - NextDNS needs to be started and configured with the correct Configuration ID
 
-
 ## Finder / UI Customizations
 
-### Remove everything from the Dock
+### Dock customization
+
+- Remove all icons from the Dock
+- Make the Dock appear instantly instead of slowly appearing
+- Very small, immutable size Dock icons
+- Only show running apps
+- Use the 'scale' animation to minimize windows to the Dock
 
 ```
-defaults write com.apple.dock persistent-apps -array && killall Dock
+defaults write com.apple.dock persistent-apps -array && \
+defaults write com.apple.dock autohide-delay -float 0.5 && \
+defaults write com.apple.dock autohide-time-modifier -int 0.5 && \
+defaults write com.apple.dock tilesize -int 12 && \
+defaults write com.apple.dock size-immutable -bool yes && \
+defaults write com.apple.dock static-only -bool true && \
+defaults write com.apple.dock mineffect -string scale && \
+killall Dock
 ```
 
 ### Set hot corners
@@ -105,6 +135,13 @@ defaults write com.apple.dock wvous-br-modifier -int 0 && \
 defaults write com.apple.dock wvous-tl-corner -int 2 && \
 defaults write com.apple.dock wvous-tl-modifier -int 0 && \
 killall Dock
+```
+
+### No drop shadow behind screenshots
+
+```
+defaults write com.apple.screencapture disable-shadow -bool true && \
+killall SystemUIServer
 ```
 
 ## dotfiles
