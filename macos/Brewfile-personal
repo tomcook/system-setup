@@ -5,7 +5,6 @@ cask "battle-net"
 cask "discord"
 cask "signal"
 cask "steam"
-mas "Bear", id: 1091189122
 mas "Brother iPrint&Scan", id: 1193539993
 mas "Apple Configurator", id: 1037126344
 mas "Day One", id: 1055511498
