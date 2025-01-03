@@ -1,9 +1,9 @@
 tap "1password/tap"
 tap "hashicorp/tap"
 tap "common-fate/granted"
+brew "atuin"
 brew "bat"
 brew "dog"
-brew "exa"
 brew "gpg"
 brew "htop"
 brew "httpie"
@@ -23,12 +23,11 @@ cask "1password-cli"
 cask "aerial"
 cask "docker"
 cask "github"
+cask "ghostty"
 cask "homebrew/cask-versions/google-chrome-beta"
 cask "istat-menus"
-cask "iterm2"
 cask "little-snitch"
 cask "maestral"
-cask "notion"
 cask "homebrew/cask-versions/slack-beta"
 cask "soundsource"
 cask "spotify"
@@ -38,8 +37,6 @@ cask "vlc"
 cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
-mas "NextDNS", id: 1464122853
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835

@@ -1,7 +1,6 @@
 brew "arq"
 brew "ffmpeg"
-brew "youtube-dl
-cask "battle-net"
+brew "youtube-dl"
 cask "discord"
 cask "signal"
 cask "steam"
