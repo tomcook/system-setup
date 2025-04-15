@@ -1,9 +1,9 @@
-brew "arq"
 brew "ffmpeg"
-brew "youtube-dl"
+brew "yt-dlp"
 cask "discord"
 cask "signal"
 cask "steam"
+cask "btop"
 mas "Brother iPrint&Scan", id: 1193539993
 mas "Apple Configurator", id: 1037126344
 mas "Day One", id: 1055511498
