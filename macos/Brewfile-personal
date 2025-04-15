@@ -15,6 +15,7 @@ brew "whatsapp"
 brew "yt-dlp"
 cask "elgato-stream-deck"
 cask "discord"
+cask "reflex"
 cask "signal"
 cask "steam"
 mas "Brother iPrint&Scan", id: 1193539993
