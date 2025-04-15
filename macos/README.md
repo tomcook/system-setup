@@ -73,34 +73,13 @@ These applications aren't in either Homebrew or the Mac App Store and have to be
 
 ### Tailscale
 
-```
-cd /tmp && \
-wget https://pkgs.tailscale.com/stable/Tailscale-1.26.2-macos.zip && \
-unzip Tailscale-1.26.2-macos.zip && \
-mv Tailscale.app /Applications/
-```
-
-### Stream Deck
-
-```
-cd /tmp && \
-wget https://edge.elgato.com/egc/macos/sd/Stream_Deck_5.3.1.15197.pkg && \
-open Stream_Deck_5.3.1.15197.pkg
-```
-
-### Reflex
-
-```
-cd ~/Downloads && \
-wget http://stuntsoftware.com/download/reflex_1.2.zip
-```
+Download and install the .pkg from https://pkgs.tailscale.com/stable/#macos
 
 ## App Follow-up
 
 - Little Snitch should be setup first. It'll require a number of permissions that have to be granted manually.
 - Tailscale will need to be signed-in, allowed to function as a VPN, and set up manually.
 - Soundsource will need a full manual configuration and possibly a reboot
-- NextDNS needs to be started and configured with the correct Configuration ID
 
 ## Finder / UI Customizations
 
@@ -147,11 +126,5 @@ killall SystemUIServer
 ## dotfiles
 
 ## Misc
-
-### Change to the bash shell
-
-```
-chsh -s /bin/bash
-```
 
 ### iStat Menu Config
