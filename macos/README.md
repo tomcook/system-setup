@@ -125,6 +125,20 @@ killall SystemUIServer
 
 ## dotfiles
 
+## shell
+
+Set fish as an allowed shell
+
+```
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+```
+
+Change shell to fish
+
+```
+chsh -s /opt/homebrew/bin/fish
+```
+
 ## Misc
 
 ### iStat Menu Config
